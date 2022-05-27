@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "40f009e6-5173-403d-bc20-00a08c706428",
+		"name": "Deck of Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20249303"
+	},
+	"item": [
+		{
+			"name": "Shuffle the Cards",
+			"item": [
+				{
+					"name": "Default deck count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "deck_count",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blackjack deck count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "deck_count",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "More than 20 deck count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=21",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "deck_count",
+									"value": "21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Draw a Card",
+			"item": [
+				{
+					"name": "With new deck_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/draw/?count=2",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "With other deck_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/r0h6q87g3l42/draw/?count=2",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"r0h6q87g3l42",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "With invalid deck_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/r0h6q87g3l41/draw/?count=2",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"r0h6q87g3l41",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reshuffle the Cards",
+			"item": [
+				{
+					"name": "Without remaining=true",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/r0h6q87g3l42/shuffle",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"r0h6q87g3l42",
+								"shuffle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "With remaining=true",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/r0h6q87g3l42/shuffle/?remaining=true",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"r0h6q87g3l42",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "remaining",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "A Brand New Deck",
+			"item": [
+				{
+					"name": "Without joker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "With joker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/jokers_enabled=true",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"jokers_enabled=true"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "A Partial Deck",
+			"item": [
+				{
+					"name": "With correct card codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "cards",
+									"value": "AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "With incorrect card codes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KL,PT,JH,123",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"new",
+								"shuffle",
+								""
+							],
+							"query": [
+								{
+									"key": "cards",
+									"value": "AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KL,PT,JH,123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adding to Piles",
+			"item": [
+				{
+					"name": "Adding to piles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/<<deck_id>>/pile/pile_name/add/?cards=AS,2S",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"<<deck_id>>",
+								"pile",
+								"pile_name",
+								"add",
+								""
+							],
+							"query": [
+								{
+									"key": "cards",
+									"value": "AS,2S"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shuffle Piles",
+			"item": [
+				{
+					"name": "Shuffle piles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/shuffle/",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"<<deck_id>>",
+								"pile",
+								"<<pile_name>>",
+								"shuffle",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listing Cards in Piles",
+			"item": [
+				{
+					"name": "Listing cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/<<deck_id>>/pile/<<pile_name>>/list/",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"<<deck_id>>",
+								"pile",
+								"<<pile_name>>",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drawing from Piles",
+			"item": [
+				{
+					"name": "Drawing from piles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/<<deck_id>>/pile/random/draw/?cards=AS",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"<<deck_id>>",
+								"pile",
+								"random",
+								"draw",
+								""
+							],
+							"query": [
+								{
+									"key": "cards",
+									"value": "AS"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Returning cards to the deck",
+			"item": [
+				{
+					"name": "Returning cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://deckofcardsapi.com/api/deck/r0h6q87g3l42/return/ ",
+							"protocol": "http",
+							"host": [
+								"deckofcardsapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"deck",
+								"r0h6q87g3l42",
+								"return",
+								" "
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
